@@ -8,6 +8,7 @@ use Rack::CommonLogger
 # Toto App for Blog
 
 toto = Toto::Server.new do
+  set :prefix, "/blog"
   set :title, @title 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
   set :summary,   :max => 500
