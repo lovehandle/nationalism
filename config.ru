@@ -21,7 +21,7 @@ toto = Toto::Server.new do
   set :title,   @title 
   set :date,    lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
   set :summary, :max => 500
-  set :root,    "home"
+  set :root,    "index"
   set :url,     "#{@domain}/blog/"
 end
 
