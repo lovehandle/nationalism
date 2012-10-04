@@ -1,0 +1,44 @@
+
+body {
+  background: url("/img/flag_eagle.jpg")
+}
+
+a, a:visited, a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+#header {
+  margin-top: 10px;
+  padding: 20px;
+  background-image: url("/img/header/flag.jpg");
+  border: 1px solid #ccc;
+}
+
+#nav ul li {
+  display: inline-block;  
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: black;
+  padding: 0.2em 0;
+}
+
+#main {
+  margin-top: 20px;
+  background-color: #333;
+  padding: 20px;
+  color: #eee;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.quote {
+  color: #bbb;
+}
