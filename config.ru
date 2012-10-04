@@ -14,7 +14,6 @@ toto = Toto::Server.new do
     :articles  => "blog/articles"
   }
 
-  set :prefix, "/blog"
   set :title, @title 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
   set :summary,   :max => 500
