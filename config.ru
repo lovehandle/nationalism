@@ -8,15 +8,21 @@ use Rack::CommonLogger
 # Toto App for Blog
 
 toto = Toto::Server.new do
+  Toto::Paths = {
+    :templates => "blog/templates",
+    :pages     => "blog/templates/pages",
+    :articles  => "blog/articles"
+  }
+
   set :to_html,     lambda {|path, page, ctx|
     ::Haml::Engine.new(File.read("#{path}/#{page}.haml"), :format => :html5, :ugly => true).render(ctx)
   }
-  set :prefix, "/blog"
-  set :title, @title 
-  set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
-  set :summary,   :max => 500
-  set :root, "home"
-  set :url, "#{@domain}/blog/"
+
+  set :title,   @title 
+  set :date,    lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
+  set :summary, :max => 500
+  set :root,    "home"
+  set :url,     "#{@domain}/blog/"
 end
 
 # Rack App to coordinate navigation between Sinatra and Toto

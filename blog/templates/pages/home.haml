@@ -1,0 +1,10 @@
+.grid_8
+  - for article in articles[0...3]
+    %article.post
+      %header
+        %h3
+          %a{:href => article.path}= article.title
+      %section.content= article.summary
+      .more
+        %a{:href => article.path } read on &raquo;
+.grid_3= archives[3..-1]
