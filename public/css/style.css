@@ -39,6 +39,21 @@ a, a:visited, a:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
+h3 a {
+  color: #eee;
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: #eee;
+  text-decoration: none;
+}
+
+h3 a:visited {
+  color: #eee;
+  text-decoration: none;
+}
+
 .quote {
   color: #bbb;
 }
