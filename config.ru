@@ -18,6 +18,7 @@ toto = Toto::Server.new do
     ::Haml::Engine.new(File.read("#{path}/#{page}.haml"), :format => :html5, :ugly => true).render(ctx)
   }
 
+  set :prefix,  "/blog"
   set :title,   @title 
   set :date,    lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
   set :summary, :max => 500
