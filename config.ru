@@ -8,16 +8,11 @@ use Rack::CommonLogger
 # Toto App for Blog
 
 toto = Toto::Server.new do
-  Toto::Paths = {
-    :templates => "blog/templates",
-    :pages     => "blog/templates/pages",
-    :articles  => "blog/articles"
-  }
-
+  set :prefix, "/blog"
   set :title, @title 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
   set :summary,   :max => 500
-  set :root, "blog"
+  set :root, "index"
   set :url, "#{@domain}/blog/"
 end
 
