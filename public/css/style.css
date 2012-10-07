@@ -57,3 +57,7 @@ h3 a:visited {
 .quote {
   color: #bbb;
 }
+
+h3.yellow a {
+  color: #DBBA24;
+}
